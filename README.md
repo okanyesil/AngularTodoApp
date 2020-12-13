@@ -1,5 +1,8 @@
 # Angular Firebase Todo App
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+
 Angular 9 ve Firestore 6.1 kullanarak yaptığım todo uygulaması. 
 
 ## Projeden Basit Görünüm
