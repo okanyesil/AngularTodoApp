@@ -4,9 +4,13 @@ import {AddTodoComponent} from './add-todo/add-todo.component';
 import {TodoDetailComponent} from './todo-detail/todo-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
-import {FormsModule} from '@angular/forms';
 import { ListAllTodoComponent } from './list-all-todo/list-all-todo.component';
+
+
+
+import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -21,7 +25,9 @@ import { ListAllTodoComponent } from './list-all-todo/list-all-todo.component';
   imports: [
     CommonModule,
     NtkmeButtonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [AddTodoComponent, TodoDetailComponent, NavbarComponent, FooterComponent, ListAllTodoComponent]
 })

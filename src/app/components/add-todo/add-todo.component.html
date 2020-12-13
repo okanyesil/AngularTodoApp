@@ -1,19 +1,18 @@
-<form>
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" class="form-control" id="title">
+    <input type="text" class="form-control" id="title" formControlName="title">
 
     <label for="description">description</label>
-    <input type="text" id="description" class="form-control">
-
-    <select class="form-control mt-2">
-      <option>Yapıldı Mı?</option>
-      <option>Evet</option>
+    <input type="text" id="description" class="form-control" formControlName="description">
+    Durum:
+    <select class="form-control mt-2" formControlName="done">
+      <option >Evet</option>
       <option>Hayır</option>
     </select>
 
 
-    <button class="btn btn-outline-success btn-block mt-2">Ekle</button>
+    <button type="submit" class="btn btn-outline-success btn-block mt-2" [disabled]="todoForm.invalid">Ekle</button>
 
   </div>
 </form>

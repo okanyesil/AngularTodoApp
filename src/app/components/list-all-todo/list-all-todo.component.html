@@ -1,1 +1,10 @@
-<p>list-all-todo works!</p>
+<ul class="list-group">
+  <li *ngFor="let item of allTodo" class="list-group-item" [ngClass]="{ 'acikGri': item.done == 'Evet', 'lila': item.done == 'Hayır' }">{{item.title}}
+    <button class="btn float-right" (click)="toggle(item.key)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <app-todo-detail *ngIf="item.toogle" [todo]="item"></app-todo-detail>
+  </li>
+</ul>
+
+

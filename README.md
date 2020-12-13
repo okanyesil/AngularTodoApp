@@ -1,27 +1,82 @@
-# AngularTodoApp
+# Angular Firebase Todo App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.10.
+Angular 9 ve Firestore 6.1 kullanarak yaptığım todo uygulaması. 
 
-## Development server
+## Projeden Basit Görünüm
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Uygulamadan görsel](todoapp.PNG)
 
-## Code scaffolding
+## Uygulamayı Kendi Bilgisayarında Çalıştırmak için Yapmanız Gerekenler
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- İlk olarak [Firebase](https://firebase.google.com/) adresinden bir hesap açın.
 
-## Build
+- Ardından console'a gidin ve yeni bir proje başlatın. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Karışına gelen ekrandan web, ios ya da android simgelerinden web'e tıkayın.
+
+![BaslamaEkrani](baslamaEkrani.PNG)
+
+- Gelen Ekrandan uygulamanıza bir ad verin ve uygulamayı kaydete basın.
+
+
+![Firebase](firebase.PNG)
+
+Eğer böyle bir ekranla karşılatıysanız. Doğru ilerliyorsunuz.
+
+````
+firebaseConfig = {
+    apiKey: "AIzaSyDa1e8WX_-pYFG_h146ZkYkwzgnNAnPXVE",
+    authDomain: "fsefsf.firebaseapp.com",
+    projectId: "fsefsf",
+    storageBucket: "fsefsf.appspot.com",
+    messagingSenderId: "295617756306",
+    appId: "1:295617756306:web:70a1a955659a9b26093a4b"
+  }
+
+````
+
+- Ekranınızda gördüğünüz firebaseConfig dosyasını kopyalayın. Projemize geçince lazım olacak.
+
+- Şimdi veritabanımızı oluşturalım.
+
+- Ana ekrana geri geldiğinizde sağ tarafta bulunan **realtime database** menüsüne girin.
+
+- Veritabanı oluştura tıklayın. İstediğiniz bir lokasyonu seçin ve ileri diyin.
+
+- **Uygulamayı test modunda** etkinleştirin.
+
+# Angular Projemize dönelim.
+
+- Az önce kopyaladığımız veriyi 
+
+````
+  src\environments\enviroment.ts dizinine aşağıdaki gibi yapıştırın.
+  
+````
+
+````
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyDa1e8WX_-pYFG_h146ZkYkwzgnNAnPXVE",
+    authDomain: "fsefsf.firebaseapp.com",
+    projectId: "fsefsf",
+    storageBucket: "fsefsf.appspot.com",
+    messagingSenderId: "295617756306",
+    appId: "1:295617756306:web:70a1a955659a9b26093a4b"
+  }
+};
+````
+
+````
+  npm i firebase @angular/fire 
+  çalıştırın ve artık uygulamayı ayağa kaldırmaya hazırız.
+  Bunun için ng serve komutunu kullanın. 
+````
 
 ## Running unit tests
 
+- Not: Testleri yakın zamanda yazmayı planlıyorum.
+
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
