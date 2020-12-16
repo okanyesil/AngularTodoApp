@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  buid:
+    working_directory: ~/AngularTodoApp
+    docker:
+      - image: circle/node:10-browsers
+    executor: machinw
+    steps:
+      - run: npm install
+      - run: npm run test -- --no-watch --no-progress --browser= ChromeHeadlessCI
