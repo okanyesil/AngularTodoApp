@@ -4,7 +4,6 @@ jobs:
     working_directory: $CIRCLE_WORKING_DIRECTORY
     docker:
       - image: circle/node:10-browsers
-    executor: machine
     steps:
       - run: npm install
       - run: npm run test -- --no-watch --no-progress --browser= ChromeHeadlessCI
