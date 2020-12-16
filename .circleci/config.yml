@@ -1,9 +1,17 @@
 version: 2
 jobs:
-  buid:
-    working_directory: $CIRCLE_WORKING_DIRECTORY
+  build:
+    working_directory: ~/AngularTodoAp
     docker:
-      - image: circle/node:10-browsers
+      - image: circleci/node:10-browsers
     steps:
+      - checkout
+      - restore_cache:
+          key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
-      - run: npm run test -- --no-watch --no-progress --browser= ChromeHeadlessCI
+      - save_cache:
+          key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
