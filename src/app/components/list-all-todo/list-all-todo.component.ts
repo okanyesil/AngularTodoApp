@@ -10,9 +10,6 @@ import {filter, map, tap} from 'rxjs/operators';
   styleUrls: ['./list-all-todo.component.css']
 })
 export class ListAllTodoComponent implements OnInit {
-  genislet = false;
-  @Output()
-  todo: TodoModel;
   allTodo: TodoModel[];
 
   constructor(private firebase: FirebaseServiceService) { }
