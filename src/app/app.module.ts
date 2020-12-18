@@ -12,7 +12,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import { TodoPageComponent } from './pages/todo-page/todo-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { SignOutComponent } from './coponents/sign-out/sign-out.component';
 
 
 @NgModule({
@@ -20,7 +19,7 @@ import { SignOutComponent } from './coponents/sign-out/sign-out.component';
     AppComponent,
     TodoPageComponent,
     LoginPageComponent,
-    SignOutComponent
+
   ],
   imports: [
     BrowserModule,

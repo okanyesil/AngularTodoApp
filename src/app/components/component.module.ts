@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { KayitOlComponent } from './kayit-ol/kayit-ol.component';
+import {SignOutComponent} from './sign-out/sign-out.component';
 
 
 
@@ -25,7 +26,8 @@ import { KayitOlComponent } from './kayit-ol/kayit-ol.component';
     FooterComponent,
     ListAllTodoComponent,
     LoginComponent,
-    KayitOlComponent
+    KayitOlComponent,
+    SignOutComponent
   ],
   imports: [
     CommonModule,
