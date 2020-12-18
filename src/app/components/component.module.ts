@@ -12,6 +12,7 @@ import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { KayitOlComponent } from './kayit-ol/kayit-ol.component';
 
 
 
@@ -23,7 +24,8 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     FooterComponent,
     ListAllTodoComponent,
-    LoginComponent
+    LoginComponent,
+    KayitOlComponent
   ],
   imports: [
     CommonModule,

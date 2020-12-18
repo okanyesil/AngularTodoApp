@@ -12,4 +12,13 @@ export class FirebaseAuthService {
   login() {
     return this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
+  loginWithEmailAndPassword(email, password) {
+    return this.auth.signInWithEmailAndPassword(email, password);
+  }
+  createAnAccount(mail, password) {
+    return this.auth.createUserWithEmailAndPassword(mail, password);
+  }
+  signOut() {
+    return this.auth.signOut();
+  }
 }

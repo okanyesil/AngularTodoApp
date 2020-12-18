@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+          <input type="text" class="form-control mb-3" #mail placeholder="example@example.com">
+          <input type="text" class="form-control" #password placeholder="***********">
+         <button class="btn btn-outline-success mt-3" (click)="girisYap(mail.value, password.value)">Giriş Yap</button>
+          <a class="btn btn-outline-info mt-3 ml-3" [routerLink]="'kayit-ol'"> Kayıt Ol </a>
+         <app-login [loginWith]="'Google İle Giriş Yap'"></app-login>
+         <app-login [loginWith]="'Github İle Giriş Yap'"></app-login>
+      </div>
+    </div>
+  </div>
+</div>
