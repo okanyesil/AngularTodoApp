@@ -11,6 +11,8 @@ import { ListAllTodoComponent } from './list-all-todo/list-all-todo.component';
 import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -20,7 +22,8 @@ import {RouterModule} from '@angular/router';
     TodoDetailComponent,
     NavbarComponent,
     FooterComponent,
-    ListAllTodoComponent
+    ListAllTodoComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +32,6 @@ import {RouterModule} from '@angular/router';
     ReactiveFormsModule,
     RouterModule
   ],
-  exports: [AddTodoComponent, TodoDetailComponent, NavbarComponent, FooterComponent, ListAllTodoComponent]
+  exports: [AddTodoComponent, TodoDetailComponent, NavbarComponent, FooterComponent, ListAllTodoComponent, LoginComponent]
 })
 export class ComponentModule { }
